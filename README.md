@@ -1,6 +1,6 @@
 # TypeScript Template
 
-TypeScript Web app template based on Koa HTTP server, enhanced with all required development tools.
+TypeScript Web app template based on Koa Web framework, enhanced with all required development tools.
 
 ## Dev Stack
 
