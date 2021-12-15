@@ -12,7 +12,8 @@
     "debug": "DEBUG=* node ./build/src/index.js",
     "start": "node ./build/src/index.js",
     "watch": "nodemon --config .nodemon.json",
-    "clean": "rm -rf ./build/*"
+    "clean": "rm -rf ./build/*",
+    "hooks": "husky install"
   },
   "author": "Alex Pereverzyev",
   "license": "MIT",
@@ -48,6 +49,7 @@
     "chai-as-promised": "^7.1.1",
     "eslint": "^8.4.1",
     "eslint-config-prettier": "^8.3.0",
+    "husky": "^7.0.4",
     "mocha": "^9.1.3",
     "nodemon": "^2.0.15",
     "nyc": "^15.1.0",
