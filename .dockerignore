@@ -1,0 +1,14 @@
+.nyc_output
+.vscode
+build
+coverage
+node_modules
+.dockerignore
+.editorconfig
+.eslintignore
+.eslintrc.json
+.gitignore
+.npmignore
+.nodemon.json
+.prettierrc.json
+Dockerfile
