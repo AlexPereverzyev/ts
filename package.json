@@ -2,19 +2,6 @@
   "name": "ts-template",
   "version": "0.1.0",
   "description": "TypeScript Template",
-  "main": "build/src/index.js",
-  "scripts": {
-    "format": "prettier --write 'src/**/*.ts'",
-    "lint": "eslint . --ext .ts",
-    "build": "npm run clean && tsc",
-    "test": "mocha",
-    "coverage": "nyc mocha",
-    "debug": "DEBUG=* node ./build/src/index.js",
-    "start": "node ./build/src/index.js",
-    "watch": "nodemon --config .nodemon.json",
-    "clean": "rm -rf ./build/*",
-    "hooks": "husky install"
-  },
   "author": "Alex Pereverzyev",
   "license": "MIT",
   "keywords": [
@@ -25,13 +12,27 @@
     "type": "git",
     "url": "https://github.com/AlexPereverzyev/ts"
   },
+  "main": "build/src/index.js",
+  "scripts": {
+    "format": "prettier --write 'src/**/*.ts' 'test/**/*.ts'",
+    "lint": "eslint . --ext .ts",
+    "build": "npm run clean && tsc",
+    "test": "mocha",
+    "coverage": "nyc mocha",
+    "debug": "DEBUG=* node ./build/src/index.js",
+    "start": "node ./build/src/index.js",
+    "watch": "nodemon --config .nodemon.json",
+    "clean": "rm -rf ./build/*",
+    "stats": "sloc src/ -f cli-table -k total,source,comment",
+    "hooks": "husky install"
+  },
   "dependencies": {
     "koa": "^2.13.4",
     "koa-bodyparser": "^4.3.0",
     "koa-router": "^10.1.1",
     "koa-send": "^5.0.1",
     "koa-static": "^5.0.0",
-    "swagger-ui-dist": "^4.1.2"
+    "swagger-ui-dist": "4.1.2"
   },
   "devDependencies": {
     "@types/chai": "^4.3.0",
@@ -55,6 +56,7 @@
     "nyc": "^15.1.0",
     "prettier": "^2.5.1",
     "sinon": "^12.0.1",
+    "sloc": "^0.2.1",
     "ts-node": "^10.4.0",
     "typescript": "^4.5.4"
   }

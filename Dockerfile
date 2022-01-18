@@ -5,7 +5,7 @@ RUN npm install && \
     npm run build
 
 FROM base as test
-ENTRYPOINT [ "npm", "run", "coverage" ]
+ENTRYPOINT [ "npm", "test" ]
 
 FROM node:14 as runtime
 WORKDIR /home/node/app

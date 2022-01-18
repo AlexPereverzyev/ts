@@ -1,52 +1,49 @@
 {
     "swagger": "2.0",
     "info": {
-        "title": "Simple API example",
+        "title": "TypeScript Template",
         "version": "0.1.0",
-        "description": "Simple API example description",
-        "termsOfService": "http://swagger.io/terms/",
+        "description": "todo",
         "contact": {
-            "email": "apiteam@swagger.io"
-        },
-        "license": {
-            "name": "UNLICENSED"
+            "email": "todo"
         }
     },
-    "host": "localhost:8080",
-    "basePath": "/",
     "tags": [
         {
-            "name": "general",
-            "description": "Simple tag example"
-        }
+            "name": "todo",
+            "description": "todo"
+        }        
     ],
     "schemes": [
+        "https",
         "http"
     ],
     "paths": {
         "/health": {
             "get": {
                 "tags": [
-                    "general"
+                    "todo"
                 ],
-                "summary": "Service status",
-                "description": "Checks service availability",
-                "operationId": "healthcheck",
+                "summary": "todo",
+                "description": "todo",
+                "operationId": "health",
                 "produces": [
                     "application/json"
                 ],
                 "parameters": [
                     {
-                        "name": "status",
+                        "name": "query1",
                         "in": "query",
-                        "description": "Custom flag example",
+                        "description": "todo",
                         "required": false,
-                        "type": "string"
+                        "schema": {
+                            "type": "string"
+                        }
                     }
                 ],
                 "responses": {
                     "200": {
-                        "description": "Service is healthy",
+                        "description": "todo",
                         "schema": {
                             "$ref": "#/definitions/HealthcheckResponse"
                         }
@@ -60,13 +57,16 @@
             "type": "object",
             "properties": {
                 "status": {
-                    "type": "string"
+                    "type": "string",
+                    "enum": [
+                        "OK"
+                    ]
                 }
             }
         }
     },
     "externalDocs": {
-        "description": "Find out more about Swagger",
-        "url": "http://swagger.io"
+        "description": "todo",
+        "url": "www.example.com"
     }
 }

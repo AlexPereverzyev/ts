@@ -1,7 +1,11 @@
 {
     "root": true,
+    "env": {
+      "es2020": true,
+      "node": true,
+      "mocha": true
+    },
     "parser": "@typescript-eslint/parser",
-    "plugins": ["@typescript-eslint/eslint-plugin"],
     "parserOptions": {
         "project": "tsconfig.json",
         "sourceType": "module"
@@ -12,6 +16,7 @@
       "plugin:@typescript-eslint/recommended",
       "prettier"
     ],
+    "plugins": ["@typescript-eslint/eslint-plugin"],
     "rules": {
       "comma-dangle": [
         "error",
@@ -44,6 +49,7 @@
           "argsIgnorePattern": "^_",
           "varsIgnorePattern": "^_$"
         }
-      ]
+      ],
+      "quotes": ["error", "single"]
     }
   }

@@ -12,7 +12,7 @@ export default class App {
     private app: Koa | undefined;
     private server: Server | undefined;
 
-    async start(port = 8080): Promise<void> {
+    start(port = 8080): void {
         const router = new KoaRouter();
 
         // API
@@ -45,6 +45,6 @@ export default class App {
         }
         this.server.close();
 
-        console.info(`\nREST server stopping`);
+        console.info('\nREST server stopping');
     }
 }
