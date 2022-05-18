@@ -8,7 +8,8 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/build/src/index.js",
+            "program": "${workspaceFolder}/build/src/server.js",
+            "envFile": "${workspaceFolder}/.env.debug",
             "outFiles": [
                 "${workspaceFolder}/**/*.js"
             ]

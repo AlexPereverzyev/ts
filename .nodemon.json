@@ -5,8 +5,8 @@
         "build",
         "test"
     ],
-    "watch": "src/",
-    "ext": "ts,json,proto",
+    "watch": "src",
+    "ext": "ts,json",
     "delay": "2000",
-    "exec": "npm run build && npm start"
+    "exec": "npm run build && node ./build/src/server.js"
 }
